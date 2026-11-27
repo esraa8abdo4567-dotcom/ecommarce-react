@@ -1,0 +1,1 @@
+import {auth} from '../../lib/auth';import {redirect} from 'next/navigation';import type {ReactNode} from 'react';export default async function Layout({children}:{children:ReactNode}){if(!await auth())redirect('/login');return children;}

@@ -1,0 +1,2 @@
+import 'server-only';
+export async function api<T>(path:string,method='GET',body?:unknown,token?:string):Promise<T>{const r=await fetch((process.env.FRESHCART_API||'https://ecommerce.routemisr.com/api/v1')+path,{method,cache:'no-store',headers:{'Content-Type':'application/json',...(token?{token}:{})},...(body===undefined?{}:{body:JSON.stringify(body)})});const d=await r.json();if(!r.ok)throw new Error(typeof d.message==='string'?d.message:'Request failed');return d as T;}

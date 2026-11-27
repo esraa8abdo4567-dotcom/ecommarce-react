@@ -1,0 +1,1 @@
+import {Register} from '../../components/forms';export default function Page(){return <Register/>}

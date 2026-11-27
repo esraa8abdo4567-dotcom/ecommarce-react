@@ -1,0 +1,1 @@
+"use client";export default function ErrorPage({reset}:{reset:()=>void}){return <section><h2>Unable to load this page</h2><p>Check your connection or sign in again.</p><button onClick={reset}>Try again</button></section>}
